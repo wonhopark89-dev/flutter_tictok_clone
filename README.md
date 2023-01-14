@@ -1,16 +1,4 @@
 # flutter_tictok_clone
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://mobbin.com/apps/tik-tok-ios-0191844d-7844-4d73-bd76-9009a4984dd8/86188f6c-3ccd-4bd1-8e2e-b326f57d11f4/screens
+https://mobbin.com/apps/tik-tok-android-a32a7946-97ea-46d1-a71d-e4f374a20cd6/1275bfd3-4c4d-4b7c-bcad-d09dcee666a8/screens
