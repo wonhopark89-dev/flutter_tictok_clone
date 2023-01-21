@@ -1,25 +1,45 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tictok_clone/constants/sizes.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AuthButton extends StatelessWidget {
   final String text;
-  const AuthButton({required this.text, super.key});
+  final FaIcon icon;
+  const AuthButton({
+    required this.text,
+    required this.icon,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return FractionallySizedBox(
       widthFactor: 1,
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: Sizes.size14),
+        padding: const EdgeInsets.all(Sizes.size14),
         decoration: BoxDecoration(
-          color: Theme.of(context).primaryColor,
-          borderRadius: BorderRadius.circular(5),
           border: Border.all(
-            color: Colors.grey.shade100,
+            color: Colors.grey.shade300,
             width: 2,
           ),
         ),
-        child: Text(text),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Align(
+              alignment: Alignment.centerLeft,
+              child: icon,
+            ),
+            Text(
+              text,
+              style: const TextStyle(
+                fontSize: Sizes.size16,
+                fontWeight: FontWeight.w600,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
       ),
     );
   }
