@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_tictok_clone/constants/sizes.dart';
 import 'package:flutter_tictok_clone/features/authentication/sign_up_screen.dart';
 
@@ -28,6 +29,14 @@ class TictokApp extends StatelessWidget {
         ),
         primaryColor: const Color(0xFFE9435A),
       ),
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('ko', ''),
+        Locale('en', ''),
+      ],
       home: const SignUpScreen(),
     );
   }
