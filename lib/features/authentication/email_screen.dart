@@ -1,28 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tictok_clone/constants/gaps.dart';
 import 'package:flutter_tictok_clone/constants/sizes.dart';
-import 'package:flutter_tictok_clone/features/authentication/email_screen.dart';
 import 'package:flutter_tictok_clone/features/widgets/form_button.dart';
 
-class UsernameScreen extends StatefulWidget {
-  const UsernameScreen({super.key});
+class EmailScreen extends StatefulWidget {
+  const EmailScreen({super.key});
 
   @override
-  State<UsernameScreen> createState() => _UsernameScreenState();
+  State<EmailScreen> createState() => _EmailScreenState();
 }
 
-class _UsernameScreenState extends State<UsernameScreen> {
+class _EmailScreenState extends State<EmailScreen> {
   final TextEditingController _usernameController = TextEditingController();
   String _username = '';
-
-  // go to email screen
-  void _onNextTap() {
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (context) => const EmailScreen(),
-      ),
-    );
-  }
 
   @override
   void initState() {
@@ -64,7 +54,7 @@ class _UsernameScreenState extends State<UsernameScreen> {
             ),
             Gaps.v10,
             const Text(
-              'You can always change it later',
+              'What is your email?',
               style: TextStyle(
                 fontSize: Sizes.size16,
                 color: Colors.black54,
@@ -75,7 +65,7 @@ class _UsernameScreenState extends State<UsernameScreen> {
               controller: _usernameController,
               cursorColor: Theme.of(context).primaryColor,
               decoration: InputDecoration(
-                hintText: 'Username',
+                hintText: 'Email',
                 enabledBorder: UnderlineInputBorder(
                   borderSide: BorderSide(
                     color: Colors.grey.shade400,
@@ -87,12 +77,7 @@ class _UsernameScreenState extends State<UsernameScreen> {
               ),
             ),
             Gaps.v16,
-            GestureDetector(
-              onTap: _onNextTap,
-              child: FormButton(
-                disabled: _username.isEmpty,
-              ),
-            )
+            FormButton(disabled: _username.isEmpty)
           ],
         ),
       ),
