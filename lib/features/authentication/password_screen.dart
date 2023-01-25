@@ -110,7 +110,9 @@ class _PasswordScreenState extends State<PasswordScreen> {
                       GestureDetector(
                         onTap: _onToggleObscureText,
                         child: FaIcon(
-                          _obscureText ? FontAwesomeIcons.eye : FontAwesomeIcons.eyeSlash,
+                          _obscureText
+                              ? FontAwesomeIcons.eye
+                              : FontAwesomeIcons.eyeSlash,
                           color: Colors.grey.shade400,
                           size: Sizes.size20,
                         ),
@@ -124,7 +126,8 @@ class _PasswordScreenState extends State<PasswordScreen> {
                     ),
                   ),
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Theme.of(context).primaryColor),
+                    borderSide:
+                        BorderSide(color: Theme.of(context).primaryColor),
                   ),
                 ),
               ),
@@ -139,7 +142,9 @@ class _PasswordScreenState extends State<PasswordScreen> {
                   FaIcon(
                     FontAwesomeIcons.circleCheck,
                     size: Sizes.size20,
-                    color: _isPasswordValid() ? Colors.green : Colors.grey.shade400,
+                    color: _isPasswordValid()
+                        ? Colors.green
+                        : Colors.grey.shade400,
                   ),
                   Gaps.h10,
                   const Text('8 to 20 characters'),
